@@ -1,2 +1,2 @@
 # proyect-ecommerce
-Tienda ecommerce para productos de cuidado personal 
+Tienda ecommerce para productos de cuidado personal
