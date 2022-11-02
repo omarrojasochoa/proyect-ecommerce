@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- format ICO logo -->
+    <link rel="icon" href="recourse/logo-circle.ico" />
     <!-- fontawesome cdn -->
     <link
       rel="stylesheet"
@@ -21,12 +23,12 @@
     />
     <!-- css propio -->
     <link rel="stylesheet" href="main.css" />
-    <title>Peruvian Shop</title>
+    <title>PeruvianShop</title>
   </head>
   <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
-      <div class="container">
+      <div class="container container-nav">
         <a
           class="navbar-brand d-flex justify-content-between align-items-center order-lg-0"
           href="#"
@@ -34,10 +36,12 @@
           <img
             href="#"
             class="logo-peruvian"
-            src="https://scontent.flim9-1.fna.fbcdn.net/v/t1.6435-9/96789725_2677951305817223_6256738838748594176_n.png?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEPVAwjKZAXIAlBoaODkYJtTueg_lB8Bo5O56D-UHwGjjej10ecXzYqRq2LMqvZEbqWVaDRtK7SHL3_5YHO08f9&_nc_ohc=vdglh8mxzZQAX-rT3yX&_nc_ht=scontent.flim9-1.fna&oh=00_AfDW4s8Yd7TqtoHFXHlDqm2RdYnyp6zRLD4NuAiUZ-L95Q&oe=638240E8"
+            src="recourse/logo.png"
             alt="logo"
           />
-          <span class="text-uppercase fw-lighter ms-2">PeruvianShop</span>
+          <span href="#" class="letter-peruvian text-uppercase fw-lighter ms-2"
+            >PeruvianShop</span
+          >
         </a>
         <!--iconos: compra y notif..  -->
         <div class="order-lg-2 nav-btns">
@@ -72,9 +76,7 @@
         <div class="collapse navbar-collapse order-lg-1" id="navMenu">
           <ul class="navbar-nav mx-auto text-center">
             <li class="nav-item px-2 py-2">
-              <a class="nav-link text-uppercase text-dark" href="#header"
-                >inicio</a
-              >
+              <a class="nav-link text-uppercase text-dark" href="#">inicio</a>
             </li>
             <li class="nav-item px-2 py-2">
               <a class="nav-link text-uppercase text-dark" href="#collection"
@@ -117,19 +119,19 @@
       <div class="container h-100 d-flex align-items-center carousel-inner">
         <div class="text-center carousel-item active">
           <h2 class="text-capitalize text-white">
-            <span class="p-2">Natural 100%</span>
+            <span class="p-2">Siempre Ofertas</span>
           </h2>
           <h1
             class="text-uppercase py-2 fw-bold text-white banner pt-0 mt-3 m-0"
           >
-            <span>Nuevos Productos</span>
+            <span>Nueva Temporada</span>
           </h1>
           <a href="#" class="btn mt-3 text-uppercase">Compra ahora</a>
         </div>
         <div class="text-center carousel-item">
-          <h2 class="text-capitalize text-white">Siempre Ofertas</h2>
+          <h2 class="text-capitalize text-white">Natural 100%</h2>
           <h1 class="text-uppercase py-2 fw-bold text-white">
-            Nueva Temporada
+            Nuevos Productos
           </h1>
           <a href="#" class="btn mt-3 text-uppercase">Compra ahora</a>
         </div>
@@ -568,8 +570,502 @@
     </section>
 
     <!--====================================-->
+    <!-- offers -->
+    <section id="offers" class="py-5">
+      <div class="container">
+        <div
+          class="row d-flex align-items-center justify-content-center text-center justify-content-lg-start text-lg-start"
+        >
+          <div class="offers-content">
+            <span class="text-white">¡Descuentos de hasta 40%!</span>
+            <h2 class="mt-2 mb-4 text-white">
+              Gran Oferta <br />Apertura Web!
+            </h2>
+            <a href="#collection" class="btn">Compra Ahora</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--====================================-->
+
+    <!--====================================-->
+    <!-- blogs -->
+    <section id="blogs" class="py-5">
+      <div class="container">
+        <div class="title text-center py-5">
+          <h2 class="position-relative d-inline-block">
+            Últimas Publicaciones
+          </h2>
+        </div>
+
+        <div class="row g-3 text-center">
+          <div class="card border-0 col-md-6 col-lg-4 bg-transparent my-3">
+            <img src="./images/blog_1.jpg" alt="" />
+            <div class="card-body px-0">
+              <h4 class="card-title">
+                ¿Qué es el Carbón Activado <br />
+                y para qué sirve?
+              </h4>
+              <p class="card-text mt-3 text-muted">
+                El carbón activado o carbón activo es un elemento poroso que
+                atrapa compuestos, en primer lugar orgánicos, presentes en un
+                gas o en un líquido. Lo hace con tal efectividad, que es el
+                purificante más utilizado por el ser humano...
+              </p>
+              <p class="card-text">
+                <a
+                  class="text-muted"
+                  href="https://www.carbotecnia.info/aprendizaje/carbon-activado/que-es-carbon-activado/"
+                  target="_blank"
+                >
+                  <span class="fw-bold">Autor: </span>John Doe
+                </a>
+              </p>
+              <a
+                href="https://www.carbotecnia.info/aprendizaje/carbon-activado/que-es-carbon-activado/"
+                target="_blank"
+                class="btn"
+                >Leer Más</a
+              >
+            </div>
+          </div>
+
+          <div class="card border-0 col-md-6 col-lg-4 bg-transparent my-3">
+            <img src="./images/blog_3.jpg" alt="" />
+            <div class="card-body px-0">
+              <h4 class="card-title">
+                20 consejos de cuidado personal buenos, bonitos ¡y gratis!
+              </h4>
+              <p class="card-text mt-3 text-muted">
+                Una de las reglas básicas para vivir bonito es el cuidado
+                personal. Ya sea en momentos de estrés, tristeza o simplemente
+                cuando queremos reconectar con nuestras emociones es importante
+                tomarnos un momento para respirar y...
+              </p>
+              <p class="card-text">
+                <a
+                  class="text-muted"
+                  href="https://malvestida.com/author/malvestida/"
+                  target="_blank"
+                >
+                  <span class="fw-bold">Autor: </span>Redacción Malvestida
+                </a>
+              </p>
+              <a
+                href="https://malvestida.com/2018/10/cuidado-personal-que-no-cuestan-dinero/"
+                target="_blank"
+                class="btn"
+                >Leer Más</a
+              >
+            </div>
+          </div>
+
+          <div class="card border-0 col-md-6 col-lg-4 bg-transparent my-3">
+            <img src="./images/blog_2.jpg" alt="" />
+            <div class="card-body px-0">
+              <h4 class="card-title">
+                Dile adiós a las impurezas del cabello con Carbón Activado
+              </h4>
+              <p class="card-text mt-3 text-muted">
+                El carbón activado es un producto de origen vegetal que se
+                utiliza en cosmética por su poder purificante. Al igual que para
+                la piel, el carbón activado para el pelo resulta igual de
+                beneficioso, en especial para las personas con cabello graso...
+              </p>
+              <p class="card-text">
+                <a
+                  href="https://www.allthingshair.com/es-ar/author/mariana/"
+                  target="_blank"
+                  class="text-muted"
+                >
+                  <span class="fw-bold">Autor: </span>Mariana
+                </a>
+              </p>
+              <a
+                href="https://www.allthingshair.com/es-ar/cuidado-del-cabello/ingredientes-naturales/carbon-activado-para-el-pelo/"
+                class="btn"
+                >Leer Más</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--====================================-->
+
+    <!--====================================-->
+    <!-- about us -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row gy-lg-5 align-items-center">
+          <div class="col-lg-6 order-lg-1 text-center text-lg-start">
+            <div class="title pt-3 pb-5">
+              <h2 class="position-relative d-inline-block ms-4">
+                Sobre Nosotros
+              </h2>
+            </div>
+            <p class="lead text-muted">"Atrévete a ser diferente."</p>
+            <p>
+              Nos han hecho creer que cuidar el planeta y consumir consciente es
+              costoso y exclusivo de unos cuantos. Que para ser sustentable hay
+              que ser perfectos. ¡NO MÁS! Peruvian Shop es para todos.
+              Representados por nuestra comunidad co-creadora de los más
+              increíbles productos, estamos consolidándonos como la primera
+              marca en pensar que la ecología debe ser PARA TODOS y, nuestra
+              misión es hacerla accesible para quienes quieran dar el primer
+              paso en su cambio de hábitos y que estos sean sostenidos en el
+              tiempo.
+            </p>
+          </div>
+          <div class="col-lg-6 order-lg-0">
+            <img src="images/nosotros_3.jpg" alt="" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--====================================-->
+
+    <!--====================================-->
+    <!-- popular -->
+    <section id="popular" class="py-5">
+      <div class="container">
+        <div class="title text-center pt-3 pb-5">
+          <h2 class="position-relative d-inline-block ms-4">
+            Populares Del Año
+          </h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4 row g-3">
+            <h3 class="fs-5">Top Valoraciones</h3>
+            <div class="d-flex align-items-start justify-content-start">
+              <img
+                src="images/c_product_special01.jpg"
+                alt=""
+                class="img-fluid pe-3 w-25"
+              />
+              <div>
+                <p class="mb-0">Carbón Activado</p>
+                <span>S/ 29.90</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-start justify-content-start">
+              <img
+                src="images/c_product_9.jpg"
+                alt=""
+                class="img-fluid pe-3 w-25"
+              />
+              <div>
+                <p class="mb-0">
+                  Pasta Dental Natural <br />En Pastillas (Menta)
+                </p>
+                <span>S/ 14.90</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-start justify-content-start">
+              <img
+                src="images/c_product_special02.jpg"
+                alt=""
+                class="img-fluid pe-3 w-25"
+              />
+              <div>
+                <p class="mb-0">Wink White Tailand</p>
+                <span>S/ 44.90</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 row g-3">
+            <h3 class="fs-5">Top Ventas</h3>
+            <div class="d-flex align-items-start justify-content-start">
+              <img
+                src="images/c_product_special01.jpg"
+                alt=""
+                class="img-fluid pe-3 w-25"
+              />
+              <div>
+                <p class="mb-0">Carbón Activado</p>
+                <span>S/ 29.90</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-start justify-content-start">
+              <img
+                src="images/c_product_special03.jpg"
+                alt=""
+                class="img-fluid pe-3 w-25"
+              />
+              <div>
+                <p class="mb-0">
+                  Dúo Acondicionador + <br />
+                  Shampoo Liq. (500ml)
+                </p>
+                <span>S/ 49.90</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-start justify-content-start">
+              <img
+                src="images/c_product_3.jpg"
+                alt=""
+                class="img-fluid pe-3 w-25"
+              />
+              <div>
+                <p class="mb-0">
+                  Jabón Masajeador Cuerpo <br />
+                  (Avena)
+                </p>
+                <span>S/ 12.90</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 row g-3">
+            <h3 class="fs-5">Top Ofertas</h3>
+            <div class="d-flex align-items-start justify-content-start">
+              <img
+                src="images/c_product_special05.jpg"
+                alt=""
+                class="img-fluid pe-3 w-25"
+              />
+              <div>
+                <p class="mb-0">Hisopo De Bambú<br />(Oferta)</p>
+                <span>S/ 6.90</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-start justify-content-start">
+              <img
+                src="images/c_product_10.jpg"
+                alt=""
+                class="img-fluid pe-3 w-25"
+              />
+              <div>
+                <p class="mb-0">Cepillo Dental Bambú<br />(Oferta)</p>
+                <span>S/ 5.90</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-start justify-content-start">
+              <img
+                src="images/c_product_11.jpg"
+                alt=""
+                class="img-fluid pe-3 w-25"
+              />
+              <div>
+                <p class="mb-0">Pack Dental Pastilla<br />(Oferta)</p>
+                <span>S/ 18.90</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--====================================-->
+
+    <!--====================================-->
+    <!-- newsletter + form -->
+    <section id="newsletter" class="py-5">
+      <div class="container">
+        <div
+          class="d-flex flex-column align-items-center justify-content-center"
+        >
+          <div class="title text-center pt-3 pb-5">
+            <h2 class="position-relative d-inline-block ms-4 text-white">
+              Déjanos un mensaje!
+            </h2>
+          </div>
+          <p class="text-center text-white">
+            Es importante para nosotros saber tu opinión acerca de nuestros
+            productos o sugerencias. Estamos felices de leerte, escríbenos.
+          </p>
+
+          <div id="formulario">
+            <form
+              autocomplete="off"
+              class="contact-form"
+              action="https://formsubmit.co/orojas3095@gmail.com"
+              method="POST"
+              target="_blank"
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Nombre.."
+                title="Nombre solo acepta letras y espacion en blanco"
+                pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+                required
+              />
+              <!--pattern sirve para colocar la expresion regular para la validacion-->
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Correo Electronico.."
+                title="Email Incorrecto"
+                pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+                required
+              />
+
+              <input
+                type="text"
+                name="subject"
+                placeholder="Asunto.."
+                title="El Asunto es requerido."
+                required
+              />
+
+              <textarea
+                name="comments"
+                cols="50"
+                rows="8"
+                placeholder="Escribe tus comentarios.."
+                title="Tu comentario no debe exceder los 255 caracteres"
+                data-pattern="^.{1,255}$"
+                required
+              ></textarea>
+              <input class="btn-primary" type="submit" value="Enviar" />
+              <div class="contact-form-loader none">
+                <img src="recourse/Reload-1s-200px.svg" alt="Cargando" />
+              </div>
+              <div class="contact-form-response none">
+                <a>Los datos han sido enviados</a>
+              </div>
+            </form>
+          </div>
+          <!--==============-->
+        </div>
+      </div>
+    </section>
+    <!--====================================-->
+
+    <!--====================================-->
+    <!-- footer -->
+    <footer class="bg-dark py-5">
+      <div class="container">
+        <div class="row text-white g-4">
+          <div class="col-md-6 col-lg-3">
+            <h5
+              class="text-uppercase text-decoration-none brand text-white"
+              href="#"
+            >
+              PeruvianShop
+            </h5>
+            <p class="text-white text-muted mt-3 me-5">
+              PeruvianShop ofrece una opción de productos diferentes, especiales
+              para el cuidado personal. Somos una empresa peruana comprometida
+              con el medio ambiente.
+            </p>
+          </div>
+
+          <div id="informacion" class="col-md-6 col-lg-3">
+            <h5 class="fw-light">Información</h5>
+            <ul class="list-unstyled">
+              <li class="my-3">
+                <a href="#" class="text-white text-decoration-none text-muted">
+                  <i class="fas fa-chevron-right me-1"></i> Inicio
+                </a>
+              </li>
+              <li class="my-3">
+                <a
+                  href="#collection"
+                  class="text-white text-decoration-none text-muted"
+                >
+                  <i class="fas fa-chevron-right me-1"></i> Tienda
+                </a>
+              </li>
+              <li class="my-3">
+                <a
+                  href="#blogs"
+                  class="text-white text-decoration-none text-muted"
+                >
+                  <i class="fas fa-chevron-right me-1"></i> Blogs
+                </a>
+              </li>
+              <li class="my-3">
+                <a href="#" class="text-white text-decoration-none text-muted">
+                  <i class="fas fa-chevron-right me-1"></i> Nosotros
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <h5 class="fw-light mb-3">Contáctanos</h5>
+            <div
+              class="d-flex justify-content-start align-items-start my-2 text-muted"
+            >
+              <span class="me-3">
+                <i class="fas fa-map-marked-alt"></i>
+              </span>
+              <span class="fw-light">
+                Av. Sergio Bernales 189 <br />Surquillo, Lima - Perú.
+              </span>
+            </div>
+            <div
+              class="d-flex justify-content-start align-items-start my-2 text-muted"
+            >
+              <span class="me-3">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="fw-light"> gpshop.support@gmail.com </span>
+            </div>
+            <div
+              class="d-flex justify-content-start align-items-start my-2 text-muted"
+            >
+              <span class="me-3">
+                <i class="fas fa-phone-alt"></i>
+              </span>
+              <span class="fw-light"> +51 974 604 319 </span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <h5 class="fw-light mb-3">Síguenos en:</h5>
+            <div>
+              <ul class="list-unstyled d-flex">
+                <li>
+                  <a
+                    href="https://www.facebook.com/GPeruvianShop/"
+                    target="_blank"
+                    class="text-white text-decoration-none text-muted fs-4 me-4"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://wa.me/51946111068"
+                    target="_blank"
+                    class="text-white text-decoration-none text-muted fs-4 me-4"
+                  >
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/g_peruvianshop/"
+                    target="_blank"
+                    class="text-white text-decoration-none text-muted fs-4 me-4"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com"
+                    target="_blank"
+                    class="text-white text-decoration-none text-muted fs-4 me-4"
+                  >
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--====================================-->
+
     <!-- jquery -->
-    <script src="jquery-3.6.0.js"></script>
+    <script src="./codigo/jquery-3.6.0.js"></script>
     <!-- isotope js -->
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <!-- bootstrap js -->
@@ -578,11 +1074,12 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    <script src="codigo.js"></script>
+    <script src="./codigo/codigo.js"></script>
     <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/2f2ef926c9.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./codigo/validaciones.js"></script>
   </body>
 </html>
