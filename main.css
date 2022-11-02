@@ -64,10 +64,7 @@ a .letter-peruvian {
 #header {
   background: url(./images/banner3.jpg) no-repeat top/cover;
 }
-.banner span {
-  letter-spacing: none;
-  color: white;
-}
+
 .carousel-inner h1 {
   font-size: 70px;
   font-family: var(--lg-font);
