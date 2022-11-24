@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- format ICO logo -->
+    <link rel="icon" href="recourse/logo-circle.ico" />
+    <!-- fontawesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <!-- css propio -->
+    <link rel="stylesheet" href="main.css" />
+    <title>PeruvianShop</title>
+  </head>
+  <body>
+    <!--====================================-->
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+      <div class="container container-nav">
+        <a
+          class="navbar-brand d-flex justify-content-between align-items-center order-lg-0"
+          href="ecommerce.html"
+        >
+          <img
+            href="ecommerce.html"
+            class="logo-peruvian"
+            src="recourse/logo.png"
+            alt="logo"
+          />
+          <span href="#" class="letter-peruvian text-uppercase fw-lighter ms-2"
+            >PeruvianShop</span
+          >
+        </a>
+        <!--iconos: compra y notif..  -->
+        <div class="order-lg-2 nav-btns">
+          <button
+            onclick="window.location.href='#'"
+            type="button"
+            class="btn position-relative"
+          >
+            <i class="fa fa-shopping-cart"></i>
+            <!-- <span
+              class="position-absolute top-0 start-100 translate-middle badge bg-primary"
+              >+</span
+            > -->
+          </button>
+          <button
+            type="button"
+            class="btn position-relative"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            <i class="fa fa-heart"></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge bg-primary"
+              >1</span
+            >
+          </button>
+        </div>
+
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse order-lg-1" id="navMenu">
+          <ul class="navbar-nav mx-auto text-center">
+            <li class="nav-item px-2 py-2">
+              <a class="nav-link text-uppercase text-dark" href="ecommerce.html"
+                >inicio</a
+              >
+            </li>
+            <li class="nav-item px-2 py-2">
+              <a
+                class="nav-link text-uppercase text-dark"
+                href="ecommerce.html#collection"
+                >tienda</a
+              >
+            </li>
+            <li class="nav-item px-2 py-2">
+              <a
+                class="nav-link text-uppercase text-dark"
+                href="ecommerce.html#special"
+                >ofertas</a
+              >
+            </li>
+            <li class="nav-item px-2 py-2">
+              <a
+                class="nav-link text-uppercase text-dark"
+                href="ecommerce.html#blogs"
+                >blogs</a
+              >
+            </li>
+            <li class="nav-item px-2 py-2">
+              <a
+                class="nav-link text-uppercase text-dark"
+                href="ecommerce.html#about"
+                >nosotros</a
+              >
+            </li>
+            <li class="nav-item px-2 py-2 border-0">
+              <a
+                class="nav-link text-uppercase text-dark"
+                href="ecommerce.html#popular"
+                >populares</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--====================================-->
+    <!-- Modal1 -->
+    <div
+      class="modal fade col-md-4 ms-auto"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Notificación
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <p>
+              Tienes un 10% de descuento <br />
+              ingresando el cupón:
+              <b>PERUVIAN100</b>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--====================================-->
+    <!-- CARRITO -->
+    <section id="cart" class="py-5">
+      <div class="container">
+        <div class="title text-center py-5">
+          <h2 class="position-relative d-inline-block cart">
+            Carrito de Compras
+          </h2>
+        </div>
+        <div class="row mt-3">
+          <div class="col">
+            <form
+              id="procesar-pago"
+              action="https://formsubmit.co/orojas3095@gmail.com"
+              method="post"
+              target="_blank"
+              autocomplete="off"
+              class="form"
+            >
+              <div class="form-group row d-none">
+                <div class="col-12 col-md-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="ENVIO POR REALIZAR"
+                    value="Estado - Pedido Aceptado"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="cliente" class="col-12 col-md-2 col-form-label h2"
+                  >Cliente :</label
+                >
+                <div class="col-12 col-md-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cliente"
+                    pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+                    placeholder="Ingresa nombre completo"
+                    name="destinatario"
+                    required
+                    title="Casilla Cliente solo acepta letras y espacios en blanco"
+                  />
+                </div>
+                <div class="valid-feedback">Todo Bien!</div>
+                <div class="invalid-feedback">Es necesario poner el nombre</div>
+              </div>
+              <div class="form-group row">
+                <label for="telefono" class="col-12 col-md-2 col-form-label h2"
+                  >Telefono :</label
+                >
+                <div class="col-12 col-md-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="telefono"
+                    pattern="^.{9}$"
+                    placeholder="Ingresa número de celular"
+                    name="telefono"
+                    required
+                    title="El número debe contener 9 cifras"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="email" class="col-12 col-md-2 col-form-label h2"
+                  >Correo Electrónico :</label
+                >
+                <div class="col-12 col-md-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="correo"
+                    placeholder="Ingresa tu correo"
+                    pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+                    name="Correo"
+                    required
+                    title="Email Incorrecto. Debe contener @ y '.'"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="direccion" class="col-12 col-md-2 col-form-label h2"
+                  >Dirección :</label
+                >
+                <div class="col-12 col-md-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="direccion"
+                    placeholder="Ingresa tú dirección"
+                    name="direccion"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div id="carrito-tab" class="form-group table-responsive">
+                <table class="table" id="lista-compra">
+                  <thead>
+                    <tr>
+                      <th scope="col">Imagen</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Precio</th>
+                      <th scope="col">Cantidad</th>
+                      <th scope="col">Sub Total</th>
+                      <th scope="col">Eliminar</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                  <tr>
+                    <th colspan="4" scope="col" class="text-end">
+                      SUB TOTAL :
+                    </th>
+                    <th scope="col">
+                      <p id="subtotal"></p>
+                    </th>
+                    <!-- <th scope="col"></th> -->
+                  </tr>
+                  <tr>
+                    <th colspan="4" scope="col" class="text-end">IGV :</th>
+                    <th scope="col">
+                      <p id="igv"></p>
+                    </th>
+                    <!-- <th scope="col"></th> -->
+                  </tr>
+                  <tr>
+                    <th colspan="4" scope="col" class="text-end">TOTAL :</th>
+                    <th scope="col">
+                      <input
+                        id="total"
+                        name="monto"
+                        class="fw-bold border-0"
+                        readonly
+                        style="background-color: white"
+                      />
+                    </th>
+                    <!-- <th scope="col"></th> -->
+                  </tr>
+                </table>
+              </div>
+
+              <div class="row justify-content-center" id="loaders">
+                <img id="cargando" src="images/puff.svg" width="100" />
+              </div>
+
+              <div class="d-flex flex-wrap justify-content-around">
+                <div class="row-md-4 mb-2">
+                  <a href="ecommerce.html#collection" class="btn btn-info"
+                    >Seguir comprando</a
+                  >
+                </div>
+                <div class="row-xs-3 row-md-4">
+                  <button
+                    href="#"
+                    type="submit"
+                    class="btn btn-success"
+                    id="procesar-compra"
+                    value="Realizar compra"
+                  >
+                    Realizar compra
+                  </button>
+                </div>
+              </div>
+            </form>
+            <form id="descuento">
+              <div class="form-group row justify-content-around m-4">
+                <label for="cupon" class="col-2 col-md-2 col-form-label h2"
+                  >CUPÓN :</label
+                >
+                <div class="col-6 col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cupon"
+                    placeholder="Ingresa Cupón Descuento"
+                    name="descuento"
+                  />
+                </div>
+
+                <div class="col-4 col-md-4 row-xs-3 row-md-4">
+                  <button
+                    href="#"
+                    type="submit"
+                    class="btn btn-success"
+                    id="aplicar-cupon"
+                  >
+                    Aplicar Cupón
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--====================================-->
+    <!-- footer -->
+    <footer class="bg-dark py-5">
+      <div class="container">
+        <div class="row text-white g-4">
+          <div class="col-md-6 col-lg-3">
+            <h5
+              class="text-uppercase text-decoration-none brand text-white"
+              href="#"
+            >
+              PeruvianShop
+            </h5>
+            <p class="text-white text-muted mt-3 me-5">
+              PeruvianShop ofrece una opción de productos diferentes, especiales
+              para el cuidado personal. Somos una empresa peruana comprometida
+              con el medio ambiente.
+            </p>
+          </div>
+
+          <div id="informacion" class="col-md-6 col-lg-3">
+            <h5 class="fw-light">Información</h5>
+            <ul class="list-unstyled">
+              <li class="my-3">
+                <a href="#" class="text-white text-decoration-none text-muted">
+                  <i class="fas fa-chevron-right me-1"></i> Inicio
+                </a>
+              </li>
+              <li class="my-3">
+                <a
+                  href="ecommerce.html#collection"
+                  class="text-white text-decoration-none text-muted"
+                >
+                  <i class="fas fa-chevron-right me-1"></i> Tienda
+                </a>
+              </li>
+              <li class="my-3">
+                <a
+                  href="ecommerce.html#blogs"
+                  class="text-white text-decoration-none text-muted"
+                >
+                  <i class="fas fa-chevron-right me-1"></i> Blogs
+                </a>
+              </li>
+              <li class="my-3">
+                <a
+                  href="ecommerce.html#about"
+                  class="text-white text-decoration-none text-muted"
+                >
+                  <i class="fas fa-chevron-right me-1"></i> Nosotros
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <h5 class="fw-light mb-3">Contáctanos</h5>
+            <div
+              class="d-flex justify-content-start align-items-start my-2 text-muted"
+            >
+              <span class="me-3">
+                <i class="fas fa-map-marked-alt"></i>
+              </span>
+              <span class="fw-light">
+                Av. Sergio Bernales 189 <br />Surquillo, Lima - Perú.
+              </span>
+            </div>
+            <div
+              class="d-flex justify-content-start align-items-start my-2 text-muted"
+            >
+              <span class="me-3">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="fw-light"> gpshop.support@gmail.com </span>
+            </div>
+            <div
+              class="d-flex justify-content-start align-items-start my-2 text-muted"
+            >
+              <span class="me-3">
+                <i class="fas fa-phone-alt"></i>
+              </span>
+              <span class="fw-light"> +51 974 604 319 </span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <h5 class="fw-light mb-3">Síguenos en:</h5>
+            <div>
+              <ul class="list-unstyled d-flex">
+                <li>
+                  <a
+                    href="https://www.facebook.com/GPeruvianShop/"
+                    target="_blank"
+                    class="text-white text-decoration-none text-muted fs-4 me-4"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://wa.me/51946111068"
+                    target="_blank"
+                    class="text-white text-decoration-none text-muted fs-4 me-4"
+                  >
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/g_peruvianshop/"
+                    target="_blank"
+                    class="text-white text-decoration-none text-muted fs-4 me-4"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com"
+                    target="_blank"
+                    class="text-white text-decoration-none text-muted fs-4 me-4"
+                  >
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--====================================-->
+
+    <!-- jquery -->
+    <script src="./codigo/jquery-3.6.0.js"></script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./codigo/codigo.js"></script>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/2f2ef926c9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./codigo/validaciones.js"></script>
+    <script src="./codigo/carrito.js"></script>
+    <!-- <script src="./codigo/pedido.js"></script> -->
+    <script src="./codigo/compra.js"></script>
+  </body>
+</html>

@@ -58,7 +58,14 @@ a .letter-peruvian {
 .nav-item {
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
 }
-
+#carrito {
+  align-items: center;
+  width: 370px;
+  background: white;
+}
+#carrito > * {
+  margin: 5px;
+}
 /*================================*/
 /* header */
 #header {
@@ -292,11 +299,37 @@ footer a:hover {
 }
 
 /*================================*/
+/* cart */
+.cart {
+  padding: 60px 0px 60px 0px;
+}
+#procesar-pago {
+  margin: -75px 0px 0px 0px;
+}
+#procesar-pago > * {
+  padding: 10px;
+}
+#cargando {
+  display: none;
+}
+/*================================*/
 /*================================*/
 /* media queries */
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   .nav-item {
     border-bottom: none;
+  }
+  button.btn.position-relative {
+    width: 50px;
+    height: 50px;
+    padding-bottom: 1px;
+  }
+  #carrito {
+    align-items: center;
+    width: 380px;
+  }
+  #carrito > * {
+    margin: 5px;
   }
 }
 
@@ -304,5 +337,53 @@ footer a:hover {
   .container-nav a {
     display: block;
     justify-content: center;
+    padding: 0;
+  }
+  .navbar {
+    width: 100%;
+  }
+  button.btn.position-relative {
+    width: 50px;
+    height: 50px;
+    padding-bottom: 1px;
+  }
+  #carrito {
+    align-items: center;
+    width: 240px;
+    background: white;
+  }
+  #carrito > * {
+    font-size: 10px;
+    margin: 5px;
+  }
+  .carrito-producto {
+    width: 50px;
+  }
+  .carousel-inner h1 {
+    font-size: 50px;
+    font-family: var(--lg-font);
+  }
+  a .letter-peruvian {
+    display: none;
+  }
+  .contact-form {
+    --form-ok-color: #4caf50;
+    --form-error-color: #f44336;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    background: #fff;
+    padding: 40px 0;
+    box-shadow: 0 0 5px 0px rgb(160, 160, 160);
+    border-radius: 10px;
+    padding: 3px 15px 5px 15px;
+    width: 350px;
+    height: 100%;
+  }
+  .dsct-offert-banner {
+    font-size: 45px !important;
+  }
+  .dsct-banner {
+    font-size: 20px !important;
   }
 }
