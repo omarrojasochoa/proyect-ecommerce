@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SweetAlert -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css"
+    />
     <!-- format ICO logo -->
     <link rel="icon" href="recourse/logo-circle.ico" />
     <!-- fontawesome cdn -->
@@ -21,11 +26,12 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <!-- css propio -->
+    <!-- css propio  -->
     <link rel="stylesheet" href="main.css" />
     <title>PeruvianShop</title>
   </head>
   <body>
+    <!--====================================-->
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
       <div class="container container-nav">
@@ -34,7 +40,7 @@
           href="#"
         >
           <img
-            href="#"
+            href="ecommerce.html"
             class="logo-peruvian"
             src="recourse/logo.png"
             alt="logo"
@@ -43,24 +49,76 @@
             >PeruvianShop</span
           >
         </a>
-        <!--iconos: compra y notif..  -->
+
+        <!--iconos: compra y notif..
+         onclick="window.location.href='#'"  -->
         <div class="order-lg-2 nav-btns">
           <button type="button" class="btn position-relative">
-            <i class="fa fa-shopping-cart"></i>
-            <span
+            <div class="navbar-collapse" id="navbarCollapse text-center">
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <img
+                    src="images/cart.png"
+                    class="nav-link dropdown-toggle img-fluid d-block"
+                    height="45px"
+                    width="45px"
+                    id="dropdown01"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  />
+
+                  <div
+                    id="carrito"
+                    class="dropdown-menu text-center"
+                    aria-labelledby="navbarCollapse"
+                  >
+                    <table id="lista-carrito" class="table">
+                      <thead>
+                        <tr>
+                          <th>Imagen</th>
+                          <th>Nombre</th>
+                          <th>Precio</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>
+
+                    <a
+                      href="#"
+                      id="vaciar-carrito"
+                      class="btn btn-primary btn-block"
+                      >Vaciar Carrito</a
+                    >
+                    <a
+                      href="cart.html"
+                      id="procesar-pedido"
+                      class="btn btn-danger btn-block"
+                      >Procesar Compra</a
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- <span
               class="position-absolute top-0 start-100 translate-middle badge bg-primary"
-              >3</span
-            >
+              >+</span
+            > -->
           </button>
-          <button type="button" class="btn position-relative">
+
+          <button
+            type="button"
+            class="btn position-relative"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
             <i class="fa fa-heart"></i>
             <span
               class="position-absolute top-0 start-100 translate-middle badge bg-primary"
               >1</span
             >
-          </button>
-          <button type="button" class="btn position-relative">
-            <i class="fa fa-search"></i>
           </button>
         </div>
 
@@ -109,11 +167,55 @@
     </nav>
 
     <!--====================================-->
+
+    <!-- Modal1 -->
+    <div
+      class="modal fade col-md-4 ms-auto"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Notificación
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <p>
+              Tienes un 10% de descuento <br />
+              ingresando el cupón:
+              <b>PERUVIAN100</b>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--====================================-->
     <!-- header -->
     <header
       id="header"
       class="vh-100 carousel slide"
       data-bs-ride="carousel"
+      data-bs-interval="3000"
       style="padding-top: 104px"
     >
       <div class="container h-100 d-flex align-items-center carousel-inner">
@@ -124,16 +226,16 @@
           <h1
             class="text-uppercase py-2 fw-bold text-white banner pt-0 mt-3 m-0"
           >
-            <span>Nueva Temporada</span>
+            Nueva Temporada
           </h1>
-          <a href="#" class="btn mt-3 text-uppercase">Compra ahora</a>
+          <a href="cart.html" class="btn mt-3 text-uppercase">Compra ahora</a>
         </div>
         <div class="text-center carousel-item">
           <h2 class="text-capitalize text-white">Natural 100%</h2>
           <h1 class="text-uppercase py-2 fw-bold text-white">
             Nuevos Productos
           </h1>
-          <a href="#" class="btn mt-3 text-uppercase">Compra ahora</a>
+          <a href="cart.html" class="btn mt-3 text-uppercase">Compra ahora</a>
         </div>
       </div>
 
@@ -185,7 +287,9 @@
             </button>
           </div>
 
-          <div class="collection-list mt-4 row gx-0 gy-3 align-baseline">
+          <div
+            class="collection-list mt-4 row gx-0 gy-3 align-baseline lista-productos"
+          >
             <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
               <div class="collection-img position-relative">
                 <img src="images/c_product_1.jpg" class="w-100" />
@@ -206,8 +310,16 @@
                   Jabón para Cuerpo y Manos <br />
                   (Maracuya)
                 </p>
-                <span class="fw-bold">S/ 12.90</span> <br />
-                <a href="#" class="btn btn-primary mt-3">Agregar al Carrito</a>
+                <span class="fw-bold"
+                  >S/ <span class="precio">12.90</span></span
+                >
+                <br />
+                <a
+                  href="#"
+                  class="btn btn-primary mt-3 agregar-carrito"
+                  data-id="1"
+                  >Agregar al Carrito</a
+                >
               </div>
             </div>
 
@@ -231,8 +343,16 @@
                   Jabón para Cuerpo y Manos <br />
                   (Fresa)
                 </p>
-                <span class="fw-bold">S/ 12.90</span> <br />
-                <a href="#" class="btn btn-primary mt-3">Agregar al Carrito</a>
+                <span class="fw-bold"
+                  >S/ <span class="precio">12.90</span></span
+                >
+                <br />
+                <a
+                  href="#"
+                  class="btn btn-primary mt-3 agregar-carrito"
+                  data-id="2"
+                  >Agregar al Carrito</a
+                >
               </div>
             </div>
 
@@ -256,8 +376,16 @@
                   Jabón Masajeador Cuerpo <br />
                   (Avena)
                 </p>
-                <span class="fw-bold">S/ 12.90</span> <br />
-                <a href="#" class="btn btn-primary mt-3">Agregar al Carrito</a>
+                <span class="fw-bold"
+                  >S/ <span class="precio">12.90</span></span
+                >
+                <br />
+                <a
+                  href="#"
+                  class="btn btn-primary mt-3 agregar-carrito"
+                  data-id="3"
+                  >Agregar al Carrito</a
+                >
               </div>
             </div>
 
@@ -281,8 +409,14 @@
                   Jabón Facial Desintoxicador <br />
                   (Carbón Activado)
                 </p>
-                <span class="fw-bold">S/ 12.90</span> <br />
-                <a href="#" class="btn btn-primary mt-3">Agregar al Carrito</a>
+                <span class="fw-bold">S/ <span class="precio">12.90</span></span
+                ><br />
+                <a
+                  href="#"
+                  class="btn btn-primary mt-3 agregar-carrito"
+                  data-id="4"
+                  >Agregar al Carrito</a
+                >
               </div>
             </div>
 
@@ -306,8 +440,14 @@
                   Shampoo Sólido <br />
                   (Romero y Palo Rosa)
                 </p>
-                <span class="fw-bold">S/ 19.90</span><br />
-                <a href="#" class="btn btn-primary mt-3">Agregar al Carrito</a>
+                <span class="fw-bold">S/ <span class="precio">19.90</span></span
+                ><br />
+                <a
+                  href="#"
+                  class="btn btn-primary mt-3 agregar-carrito"
+                  data-id="5"
+                  >Agregar al Carrito</a
+                >
               </div>
             </div>
 
@@ -331,8 +471,14 @@
                   Shampoo Sólido <br />
                   (Lavanda y Almendra)
                 </p>
-                <span class="fw-bold">S/ 19.90</span><br />
-                <a href="#" class="btn btn-primary mt-3">Agregar al Carrito</a>
+                <span class="fw-bold">S/ <span class="precio">19.90</span></span
+                ><br />
+                <a
+                  href="#"
+                  class="btn btn-primary mt-3 agregar-carrito"
+                  data-id="6"
+                  >Agregar al Carrito</a
+                >
               </div>
             </div>
 
@@ -356,8 +502,14 @@
                   Shampoo Sólido <br />
                   (Avena y Rosas)
                 </p>
-                <span class="fw-bold">S/ 19.90</span><br />
-                <a href="#" class="btn btn-primary mt-3">Agregar al Carrito</a>
+                <span class="fw-bold">S/ <span class="precio">19.90</span></span
+                ><br />
+                <a
+                  href="#"
+                  class="btn btn-primary mt-3 agregar-carrito"
+                  data-id="7"
+                  >Agregar al Carrito</a
+                >
               </div>
             </div>
 
@@ -381,8 +533,14 @@
                   Acondicionador Sólido <br />
                   (Limon y Jojoba)
                 </p>
-                <span class="fw-bold">S/ 17.50</span><br />
-                <a href="#" class="btn btn-primary mt-3">Agregar al Carrito</a>
+                <span class="fw-bold">S/ <span class="precio">17.90</span></span
+                ><br />
+                <a
+                  href="#"
+                  class="btn btn-primary mt-3 agregar-carrito"
+                  data-id="8"
+                  >Agregar al Carrito</a
+                >
               </div>
             </div>
 
@@ -407,8 +565,14 @@
                   (Menta)
                 </p>
 
-                <span class="fw-bold">S/ 14.90</span><br />
-                <a href="#" class="btn btn-primary mt-3">Agregar al Carrito</a>
+                <span class="fw-bold">S/ <span class="precio">14.90</span></span
+                ><br />
+                <a
+                  href="#"
+                  class="btn btn-primary mt-3 agregar-carrito"
+                  data-id="9"
+                  >Agregar al Carrito</a
+                >
               </div>
             </div>
 
@@ -432,8 +596,14 @@
                   1 Cepillo Dental de Bambú <br />
                   (Oferta)
                 </p>
-                <span class="fw-bold">S/ 5.90</span><br />
-                <a href="#" class="btn btn-primary mt-3">Agregar al Carrito</a>
+                <span class="fw-bold">S/ <span class="precio">5.90</span></span
+                ><br />
+                <a
+                  href="#"
+                  class="btn btn-primary mt-3 agregar-carrito"
+                  data-id="10"
+                  >Agregar al Carrito</a
+                >
               </div>
             </div>
 
@@ -457,8 +627,14 @@
                   Pack Dental Pastilla <br />
                   (Oferta)
                 </p>
-                <span class="fw-bold">S/ 18.90</span><br />
-                <a href="#" class="btn btn-primary mt-3">Agregar al Carrito</a>
+                <span class="fw-bold">S/ <span class="precio">18.90</span></span
+                ><br />
+                <a
+                  href="#"
+                  class="btn btn-primary mt-3 agregar-carrito"
+                  data-id="11"
+                  >Agregar al Carrito</a
+                >
               </div>
             </div>
 
@@ -482,8 +658,14 @@
                   Hilo Dental Biodegradable <br />
                   (Fecula de Maíz)
                 </p>
-                <span class="fw-bold">S/ 14.90</span><br />
-                <a href="#" class="btn btn-primary mt-3">Agregar al Carrito</a>
+                <span class="fw-bold">S/ <span class="precio">14.90</span></span
+                ><br />
+                <a
+                  href="#"
+                  class="btn btn-primary mt-3 agregar-carrito"
+                  data-id="12"
+                  >Agregar al Carrito</a
+                >
               </div>
             </div>
           </div>
@@ -499,7 +681,7 @@
           <h2 class="position-relative d-inline-block">Selección Especial</h2>
         </div>
 
-        <div class="special-list row g-0">
+        <div class="special-list row g-0 lista-productosEspeciales">
           <div class="col-md-6 col-lg-4 col-xl-3 p-2">
             <div class="special-img position-relative overflow-hidden">
               <img src="images/c_product_special01.jpg" class="w-100" />
@@ -511,8 +693,15 @@
             </div>
             <div class="text-center">
               <p class="text-capitalize mt-3 mb-1">Carbón Activado</p>
-              <span class="fw-bold d-block">S/ 29.90</span>
-              <a href="#" class="btn btn-primary mt-3">Agregar al Carrito</a>
+              <span class="fw-bold d-block"
+                >S/ <span class="precio">29.90</span></span
+              >
+              <a
+                href="#"
+                class="btn btn-primary mt-3 agregar-carrito"
+                data-id="13"
+                >Agregar al Carrito</a
+              >
             </div>
           </div>
 
@@ -527,8 +716,15 @@
             </div>
             <div class="text-center">
               <p class="text-capitalize mt-3 mb-1">Wink White Tailand</p>
-              <span class="fw-bold d-block">S/ 44.90</span>
-              <a href="#" class="btn btn-primary mt-3">Agregar al Carrito</a>
+              <span class="fw-bold d-block"
+                >S/ <span class="precio">44.90</span></span
+              >
+              <a
+                href="#"
+                class="btn btn-primary mt-3 agregar-carrito"
+                data-id="14"
+                >Agregar al Carrito</a
+              >
             </div>
           </div>
 
@@ -543,8 +739,15 @@
             </div>
             <div class="text-center">
               <p class="text-capitalize mt-3 mb-1">Hisopo de Bambú</p>
-              <span class="fw-bold d-block">S/ 6.90</span>
-              <a href="#" class="btn btn-primary mt-3">Agregar al Carrito</a>
+              <span class="fw-bold d-block"
+                >S/ <span class="precio">6.90</span></span
+              >
+              <a
+                href="#"
+                class="btn btn-primary mt-3 agregar-carrito"
+                data-id="15"
+                >Agregar al Carrito</a
+              >
             </div>
           </div>
 
@@ -561,8 +764,15 @@
               <p class="text-capitalize mt-3 mb-1">
                 Sesión Detox - Carbón Activado
               </p>
-              <span class="fw-bold d-block">S/ 49.90</span>
-              <a href="#" class="btn btn-primary mt-3">Agregar al Carrito</a>
+              <span class="fw-bold d-block"
+                >S/ <span class="precio">49.90</span></span
+              >
+              <a
+                href="#"
+                class="btn btn-primary mt-3 agregar-carrito"
+                data-id="16"
+                >Agregar al Carrito</a
+              >
             </div>
           </div>
         </div>
@@ -577,11 +787,13 @@
           class="row d-flex align-items-center justify-content-center text-center justify-content-lg-start text-lg-start"
         >
           <div class="offers-content">
-            <span class="text-white">¡Descuentos de hasta 40%!</span>
-            <h2 class="mt-2 mb-4 text-white">
+            <span class="text-white dsct-banner"
+              >¡Descuentos de hasta 40%!</span
+            >
+            <h2 class="mt-2 mb-4 text-white dsct-offert-banner">
               Gran Oferta <br />Apertura Web!
             </h2>
-            <a href="#collection" class="btn">Compra Ahora</a>
+            <a href="cart.html" class="btn">Compra Ahora</a>
           </div>
         </div>
       </div>
@@ -979,7 +1191,10 @@
                 </a>
               </li>
               <li class="my-3">
-                <a href="#" class="text-white text-decoration-none text-muted">
+                <a
+                  href="#about"
+                  class="text-white text-decoration-none text-muted"
+                >
                   <i class="fas fa-chevron-right me-1"></i> Nosotros
                 </a>
               </li>
@@ -1080,6 +1295,10 @@
       src="https://kit.fontawesome.com/2f2ef926c9.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./codigo/validaciones.js"></script>
+    <script src="./codigo/carrito.js"></script>
+    <script src="./codigo/pedido.js"></script>
   </body>
 </html>
